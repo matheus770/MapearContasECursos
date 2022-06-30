@@ -1,10 +1,21 @@
 [
     {
-        "sitename": "test",
-        "email": "test",
+        "sitename": "DIO",
+        "email": "matquill@gmail.com",
         "cursos": [
-            "test"
+            "matematica para leigos",
+            "estatistica aplicada"
         ],
-        "logingoogle": "test"
+        "logingoogle": "sim"
+    },
+    {
+        "sitename": "alura",
+        "email": "alura@gmail.com",
+        "cursos": [
+            "portugues",
+            "estatistica",
+            "programa\u00e7\u00e3o"
+        ],
+        "logingoogle": "sim"
     }
 ]

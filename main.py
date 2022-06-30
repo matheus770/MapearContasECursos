@@ -16,16 +16,20 @@ dictio = {
     "cursos": scursos,
     "logingoogle": logingoogle,
 }
-accounts.append(dictio)
-jdictio = json.dumps(accounts, indent=4)
 
 if(os.path.isfile('dados.json')):
+    jdictio = json.dumps(dictio, indent=4)
     with open("dados.json", "r") as json_file:
         dados = json.load(json_file)
-        print(dados)
+        dados.append(dictio)
         close
-        #!Se existir dados pegar eles adicionar o novo json e salvar o arquivo com os dados atualizados
+    with open("dados.json", "w") as json_file:
+        jdictio = json.dumps(dados, indent=4)
+        json_file.write(jdictio)
+        close
 else:
+    accounts.append(dictio)
+    jdictio = json.dumps(accounts, indent=4)
     with open("dados.json", "w") as json_file:
         json_file.write(jdictio)
         close
