@@ -1,5 +1,8 @@
 from fileinput import close
 import json, os.path
+from model import ContaCurso
+
+
 while True:
     accounts = []
 
@@ -10,13 +13,11 @@ while True:
     scursos = cursos.split(",")
     logingoogle = str(input("Login com o google: "))
 
-    dictio = {
-        "sitename": sitename,
-        "email": email,
-        "cursos": scursos,
-        "logingoogle": logingoogle,
-    }
-
+    dadosuser = ContaCurso(sitename,email,scursos,logingoogle)
+    dadosdic = dadosuser.to_Json()
+    accounts.append(dadosdic)
+    dictio = accounts
+    
     if(os.path.isfile('dados.json')):              
         jdictio = json.dumps(dictio, indent=4)
         with open("dados.json", "r") as json_file:
@@ -27,20 +28,25 @@ while True:
             jdictio = json.dumps(dados, indent=4)
             json_file.write(jdictio)
             close
-        print("O que deseja fazer 1 == Registrar outra conta || 2 == Exportar para PDF || 3 == Sair")
-        
+        with open('dados.txt','a',newline='') as arquivo:
+            arquivo.write(dadosuser.show())
+            arquivo.write('\n')
+            close
+        print("O que deseja fazer 1 == Registrar outra conta || 2 == Sair ")
         op = int(input("Qual a opção desejada: "))
         if op == 1:
             continue
         elif op == 2:
-            pass
-        elif op == 3:
             break
     else:
-        accounts.append(dictio)
         jdictio = json.dumps(accounts, indent=4)
         with open("dados.json", "w") as json_file:
             json_file.write(jdictio)
             close
+        with open('dados.txt','a',newline='') as arquivo:
+            arquivo.write(dadosuser.show())
+            arquivo.write('\n')
+            close
+        break
 
 

@@ -1,45 +1,20 @@
 [
     {
-        "sitename": "DIO",
-        "email": "matquill@gmail.com",
+        "site": "t",
+        "email": "t",
         "cursos": [
-            "matematica para leigos",
-            "estatistica aplicada"
+            "t"
         ],
-        "logingoogle": "sim"
+        "logingoogle": "t"
     },
-    {
-        "sitename": "alura",
-        "email": "alura@gmail.com",
-        "cursos": [
-            "portugues",
-            "estatistica",
-            "programa\u00e7\u00e3o"
-        ],
-        "logingoogle": "sim"
-    },
-    {
-        "sitename": "r",
-        "email": "r",
-        "cursos": [
-            "r"
-        ],
-        "logingoogle": "r"
-    },
-    {
-        "sitename": "l",
-        "email": "l",
-        "cursos": [
-            "l"
-        ],
-        "logingoogle": "l"
-    },
-    {
-        "sitename": "f",
-        "email": "f",
-        "cursos": [
-            "f"
-        ],
-        "logingoogle": "f"
-    }
+    [
+        {
+            "site": "te",
+            "email": "te",
+            "cursos": [
+                "te"
+            ],
+            "logingoogle": "te"
+        }
+    ]
 ]
