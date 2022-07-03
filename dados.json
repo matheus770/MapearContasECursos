@@ -1,20 +1,19 @@
 [
     {
-        "site": "t",
-        "email": "t",
+        "site": "teste",
+        "email": "teste@gmail.com",
         "cursos": [
-            "t"
+            "teste"
         ],
-        "logingoogle": "t"
+        "logingoogle": "sim"
     },
-    [
-        {
-            "site": "te",
-            "email": "te",
-            "cursos": [
-                "te"
-            ],
-            "logingoogle": "te"
-        }
-    ]
+    {
+        "site": "teeste2",
+        "email": "teste2@gmail.com",
+        "cursos": [
+            "teste",
+            "teste2"
+        ],
+        "logingoogle": "Nao"
+    }
 ]

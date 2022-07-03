@@ -1,10 +1,10 @@
-site: t 
-email: t 
-cursos: ['t'] 
-logingoogle: t 
+site: teste
+email: teste@gmail.com 
+cursos: ['teste'] 
+logingoogle: sim 
 
-site: te 
-email: te 
-cursos: ['te'] 
-logingoogle: te 
+site: teeste2 
+email: teste2@gmail.com 
+cursos: ['teste', 'teste2'] 
+logingoogle: Nao 
 
