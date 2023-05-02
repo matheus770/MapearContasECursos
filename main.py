@@ -4,7 +4,7 @@ from model import ContaCurso
 
 while(True):
     
-    print("O que deseja fazer 1 == Registrar Dados || 2 == Sair: ")
+    print("O que deseja fazer 1 == Registrar Dados || 2 == Sair || 3 == Mostrar Dados || 4 == Editar Dados: ")
     opcao = input("Qual a opção desejada: ")
     if opcao == str(1):
         accounts = []
@@ -42,10 +42,18 @@ while(True):
             with open('dados.txt','a',newline='') as arquivo:
                 arquivo.write(dadoscontacurso.show())
                 arquivo.write('\n')
-                close
     elif opcao == str(2):
         break
-    elif (opcao != 1) or (opcao != 2) or (type(opcao) == str):
+    elif opcao == str(3):   
+        with open("dados.json", "r") as json_file:
+            dados = json.load(json_file)
+            close
+            for i in range(len(dados)):
+                dadoscontacurso = ContaCurso(dados[i]["site"],dados[i]["email"],dados[i]["cursos"],dados[i]["logingoogle"])
+                dadoscontacurso.show()
+    elif opcao == str(4):
+        break        
+    elif (opcao != 1) or (opcao != 2) or (opcao != 3) or (opcao != 4) or (type(opcao) == str):
         print("Digite uma opção valida!!!")
         continue
     

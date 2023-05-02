@@ -6,7 +6,7 @@ class ContaCurso:
         self.logingoogle = logingoogle
         
     def show(self):
-        return f"site: {self.sitename} \nemail: {self.email} \ncursos: {self.cursos} \nlogingoogle: {self.logingoogle} \n"
+        return print(f"\nsite: {self.sitename} \nemail: {self.email} \ncursos: {self.cursos} \nlogingoogle: {self.logingoogle} \n")
     def to_Json(self):
         return{"site": self.sitename, "email": self.email, "cursos": self.cursos, "logingoogle": self.logingoogle}
     
